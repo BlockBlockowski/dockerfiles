@@ -96,19 +96,19 @@ fi
 echo ""
 
 echo "~> Tag version to registry..."
-docker tag expressvpn:${tag} polkaned/expressvpn:${tag}
+docker tag expressvpn:${tag} expressvpn:${tag}
 echo ""
 
 echo "~> Tag lastest to registry..."
-docker tag expressvpn:${tag} polkaned/expressvpn
+docker tag expressvpn:${tag} expressvpn
 echo ""
 
 echo "~> Push to registry..."
-docker push --all-tags polkaned/expressvpn
+docker push --all-tags expressvpn
 echo ""
 
 echo "~> Cleaning..."
-docker rmi polkaned/expressvpn:latest
-docker rmi polkaned/expressvpn:${tag}
+docker rmi expressvpn:latest
+docker rmi expressvpn:${tag}
 docker rmi expressvpn:${tag}
 echo ""
